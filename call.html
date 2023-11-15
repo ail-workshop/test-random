@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<!--    <link rel="icon" href="./assets/images/AIAI_prog.png" /> -->
+		<title>AIAI | Home</title>
+    <meta name="description" content="A webpage dedicated to AIAI conference.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+
+		<script defer src="./js/script.js"></script>
+        <script type="text/javascript" src="./js/common.js"></script>
+	</head>
+<body>
+    <!-- HEADER -->
+    <script type="text/javascript">
+        header ();
+    </script>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+
+        <div id="portfolio-header-text-container">
+            <div class="header-text">
+              <span class="subheader-text">Call for papers</span>
+            </div>
+            <div class="body-text">
+                <p>Coming soon..</p>
+<!--                <a href="5445eb-e.pdf" download=>Download PDF</a>  -->
+                <p><button id="btn" type="button" onclick="downloadPdf()">Download PDF</button></p>
+                <p>Clicks: <a id="clicks">0</a> File to download: <a id="fpdf">file</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <script type="text/javascript">
+        footerContainer();
+    </script>
+</body>
+</html>

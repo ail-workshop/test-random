@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+/* Main Page Layout */
+
+#main-content {
+  margin: 225px 425px;
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+
+
+
+
+/* Portfolio Header */
+
+#portfolio-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#portfolio-header-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-basis: 50%;
+}
+
+.portfolio-header-image {
+  width: 100%;
+  height: auto;
+}
+
+#portfolio-header-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  flex-basis: 50%;
+}
+
+
+
+
+/* About Section */
+
+#about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+
+
+
+/* Project Section */
+
+#my-work-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.projects-container {
+  display: flex;
+  gap: 34px 16px;
+  flex-wrap: wrap;
+}
+
+    /* Project Cards */
+
+    .project-card {
+      max-width: calc((100% - 32px) / 3);
+      display: flex;
+      flex-direction: column;
+      gap: 34px;
+    }
+
+    .project-card-text-container {
+      flex-direction: column;
+      display: flex;
+      gap: 16px
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+
+
+
+/* Project Pages */
+
+#project-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.project-header-image {
+  width: 800px;
+  height: auto;
+  padding-top: 20px;
+}
+
+#project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+    /* Project Gallery */
+
+    #project-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .project-gallery-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 34px 16px;
+    }
+
+    .gallery-image-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .gallery-image-container.half-width {
+      width: calc((100% - 16px) / 2);
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: auto;
+    }
+
+
+/* Extra Extra large devices (large laptops and desktops, 1200px and below) */
+@media only screen and (max-width: 1600px) {
+  #main-content {
+    margin: 25px 275px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and below) */
+@media only screen and (max-width: 1200px) {
+  #main-content {
+    margin: 25px 175px;
+  }
+}
+
+/* Large devices (laptops/desktops, 1000px and below) */
+@media only screen and (max-width: 1000px) {
+  #main-content {
+    margin: 25px 75px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 800px and below) */
+@media only screen and (max-width: 800px) {
+  #main-content {
+    margin: 25px 50px;
+  }
+
+  #portfolio-header {
+    flex-direction: column;
+  }
+
+  .project-card {
+    max-width: calc((100% - 16px) / 2);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and below) */
+@media only screen and (max-width: 600px) {
+  #main-content {
+    margin: 125px 20px;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+}
+
+
+
+/* MENU */
+
+.ui-section-header--nav-link {
+  font-size: var(--ui-typography-h3);
+  padding: .5rem;
+  text-decoration: none;
+}
+
+/* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes
+ */
+blockquote {
+    font-family: Georgia, serif;
+    position: relative;
+    margin: 0.5em;
+    padding: 0.5em 2em 0.5em 3em;
+}
+blockquote:before {
+    font-family: Georgia, serif;
+    position: absolute;
+    font-size: 6em;
+    line-height: 1;
+    top: 0;
+    left: 0;
+    content: "\201C";
+}
+blockquote:after {
+    font-family: Georgia, serif;
+    position: absolute;
+   /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+    float:right;
+    font-size:6em;
+    line-height: 1;
+    right:0;
+    bottom:-0.5em;
+    content: /*"\201D";*/
+}
+blockquote footer {
+    padding: 0 2em 0 0;
+    text-align:right;
+}
+blockquote cite:before {
+    content: "\2013";
+}
+/*------------------------------------------------------------
+|
+| HEADER & FOOTER
+| https://www.w3web.net/how-to-add-header-and-footer-in-javascript
+------------------------------------------------------------*/
+
+#footerMain{
+    display: flex;
+    width:80%;
+    margin:auto;
+    border-top:1px #ccc solid;
+    padding:10px 0 0 0;
+    text-align: center;
+}
+#headerMain{
+    height:65px;
+    border-bottom:1px #ccc solid;
+    width:800px;
+    margin:auto;
+}
+.logo{
+    font-size:18px;
+    color:#000000;
+    float:left;
+    padding:25px 0 0 0;
+    text-decoration:none;
+}
+.menuMain{
+/*    width:500px; */
+    float:right;
+    padding-top:30px;
+}
+ul.menu{ margin:0; padding:0; list-style:none;}
+ul.menu li{ font-size:12px; color:#000000; float:left; border-right:1px #ccc solid; position:relative;}
+ul.menu li a, ul.menu li a:visited{ color:#000000; text-decoration:none; background:#eee; padding:5px 10px; display:block;}
+ul.menu li a:hover, ul.menu li a.sel, ul.menu li a.sel:visited{ color:#0080ff; text-decoration:none; background:#d1d1d1;}
+
